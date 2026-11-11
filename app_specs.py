@@ -1,0 +1,58 @@
+"""Input definitions shared by the Streamlit and Gradio apps."""
+
+REGRESSION_SPEC = {
+    "creator_followers_k": ("number", (1.0, 5000.0, 150.0, 1.0)),
+    "engagement_rate_pct": ("number", (0.0, 100.0, 5.5, 0.1)),
+    "paid_boost_spend_usd": ("number", (0.0, 50000.0, 500.0, 10.0)),
+    "avg_watch_time_sec": ("number", (0.0, 600.0, 12.0, 1.0)),
+    "promo_discount_pct": ("number", (0.0, 25.0, 10.0, 1.0)),
+    "caption_word_count": ("number", (0.0, 1000.0, 50.0, 1.0)),
+    "hashtags_used_count": ("number", (0.0, 50.0, 5.0, 1.0)),
+    "content_format": ("choice", ["Static-Carousel", "Short-Video-Reel", "YouTube-Deep-Dive"]),
+    "audience_intent_tier": ("choice", ["Broad-Entertainment", "Lifestyle-Warm", "High-Intent-Niche"]),
+    "creator_phone_os": ("choice", ["iOS", "Android"]),
+    "contract_payment_terms": ("choice", ["Upfront", "Net-15", "Net-30"]),
+    "posting_day_weather": ("choice", ["Sunny", "Cloudy", "Rainy"]),
+}
+
+CLASSIFICATION_SPEC = {
+    "cart_value_usd": ("number", (1.0, 2000.0, 120.0, 1.0)),
+    "past_return_rate": ("number", (0.0, 0.9, 0.2, 0.01)),
+    "size_bracketing_flag": ("choice", [0, 1]),
+    "delivery_days_taken": ("number", (1.0, 30.0, 5.0, 1.0)),
+    "discount_pct_applied": ("number", (0.0, 50.0, 10.0, 1.0)),
+    "product_category": ("choice", ["Accessories", "Casual-Tops", "Footwear", "Formal-Eveningwear"]),
+    "fit_review_sentiment": ("choice", ["True-to-Size", "Runs-Slightly-Small", "Inconsistent-Sizing"]),
+    "newsletter_subscriber": ("choice", [0, 1]),
+    "browser_used": ("choice", ["Chrome", "Safari", "Firefox", "Edge"]),
+    "checkout_device": ("choice", ["iOS-App", "Android-App", "Desktop-Web"]),
+    "packaging_color": ("choice", ["Kraft-Brown", "Minimal-White", "Branded-Teal"]),
+    "loyalty_card_color": ("choice", ["Silver", "Gold", "Platinum"]),
+}
+
+LABELS = {
+    "creator_followers_k": "Creator followers (thousands)",
+    "engagement_rate_pct": "Engagement rate (%)",
+    "paid_boost_spend_usd": "Paid boost spend (USD)",
+    "avg_watch_time_sec": "Average watch time (seconds)",
+    "promo_discount_pct": "Promo discount (%)",
+    "caption_word_count": "Caption word count",
+    "hashtags_used_count": "Hashtags used",
+    "content_format": "Content format",
+    "audience_intent_tier": "Audience intent tier",
+    "creator_phone_os": "Creator phone OS",
+    "contract_payment_terms": "Contract payment terms",
+    "posting_day_weather": "Posting day weather",
+    "cart_value_usd": "Cart value (USD)",
+    "past_return_rate": "Past return rate (0 to 0.9)",
+    "size_bracketing_flag": "Size bracketing (several sizes of one item in cart)",
+    "delivery_days_taken": "Delivery days taken",
+    "discount_pct_applied": "Discount applied (%)",
+    "product_category": "Product category",
+    "fit_review_sentiment": "Fit review sentiment",
+    "newsletter_subscriber": "Newsletter subscriber",
+    "browser_used": "Browser used",
+    "checkout_device": "Checkout device",
+    "packaging_color": "Packaging color",
+    "loyalty_card_color": "Loyalty card color",
+}
